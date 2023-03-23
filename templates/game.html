@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}BOGGLE!{% endblock %}
+{% block content %}
+    <div id="game-container">
+        <section id="game-board">
+            <h1 id="game-title">BOGGLE</h1>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <h3>Highscore: {{highscore}}</h3></td>
+                        <td></td>
+                        <td><h3>Games Played: {{play_count}}</h3></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table id="boggle-table">
+                <tbody>
+                    {% for row in board %}
+                    <tr>
+                        {% for cell in row %}
+                        <td>{{cell}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            <div id="form-score">
+                <form id="guess-form" method="POST">
+                    <input type="text" name="guess-word" class="guess-word" placeholder="Make a guess" autofocus>
+                    <button>Submit</button>
+                </form>
+                
+                <p><b>Score: </b><span class="score">0</span></p>
+                <table>
+                    <tbody>
+                        <tr class="timer">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="msg"></p>
+            <table id="guess-list">
+                {% for guess in guess_list %}
+                <tr>
+                    {% for letter in guess %}
+                    <td>{{letter}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </div>
+{% endblock %}
+
+{% block endScripts %}
+    <script>
+        let game = new BoggleGame("game-board", 60)
+    </script>
+{% endblock %}

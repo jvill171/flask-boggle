@@ -18,13 +18,13 @@ class Boggle():
         dict_file.close()
         return words
 
-    def make_board(self):
+    def make_board(self, board_size = 5):
         """Make and return a random boggle board."""
 
         board = []
 
-        for y in range(5):
-            row = [choice(string.ascii_uppercase) for i in range(5)]
+        for y in range(board_size):
+            row = [choice(string.ascii_uppercase) for i in range(board_size)]
             board.append(row)
 
         return board

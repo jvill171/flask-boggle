@@ -1,0 +1,97 @@
+body{
+    background-color: rgb(189, 189, 189);
+    text-align: center;
+}
+#game-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#game-board{
+    width: 23rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#game-board > h3{
+    padding: 5px auto;
+    margin: 7px auto;
+}
+#game-title{
+    background-color:rgb(31, 31, 31);
+    color: white;
+    letter-spacing: 10px;
+    padding: 5px 0;
+    border-radius: 7px;
+    border: 1px solid white;
+    margin: 10px 10%;
+}
+#boggle-table{
+    padding: 10px;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px black;
+    background: rgb(34,51,195);
+    background: linear-gradient(23deg, rgba(34,51,195,1) 0%, rgba(191,45,253,1) 80%);
+    width: 23rem;
+    
+}
+table:not(#guess-list){
+    width: 100%
+}
+#boggle-table td, #guess-list td, .small-dice{
+    font-family: monospace;
+    font-size: 2em;
+    border: black 2px solid;
+    border-radius: 7px;
+    background-color: white;
+    background: radial-gradient(circle, rgb(255, 255, 255) 55%, rgb(125, 125, 125) 100%);
+    padding: 13px;
+}
+#guess-list td, .small-dice{
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 6px 13px;
+    text-align: center;
+}
+
+#form-score{
+    background-color: rgb(70, 129, 255);
+    background: linear-gradient(203deg, rgba(34,51,195,1) 0%, rgba(191,45,253,1) 80%);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 20rem;
+    color: white
+}
+button, input{
+    margin: 10px auto 5px auto;
+}
+.small-dice{
+    margin: auto 3px;
+    color: black;
+}
+.msg{
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    max-width: 23rem;
+}
+.ok{
+    color: green;
+    border: 2px solid green;
+}
+.bad{
+    color: red;
+    border: 2px solid red;
+}
+.final{
+    color: white;
+    background-color: green;
+    border: 2px solid white;
+}
+.new-final{
+    color: black;
+    background-color: goldenrod;
+    border: 2px solid white;
+}
